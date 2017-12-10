@@ -5,9 +5,9 @@ BUILD INFO:
   files: 1
 */
 
-Callback.addCallback("LevelLoaded", function(){
+Callback.addCallback("PlayerAttack", function(attacker, entity){
   try{
-    var render = Entity.getRender(Player.get());
+    var render = Entity.getRender(entity;
     var str = "";
 
     for(var i in render)
