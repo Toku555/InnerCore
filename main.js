@@ -7,15 +7,15 @@ BUILD INFO:
 
 Callback.addCallback("PlayerAttack", function(attacker, entity){
   try{
-    var render = Entity.getRender(entity;
+    var render = Entity.getRender(entity);
     var str = "";
 
     for(var i in render)
       str += (""+i+" = "+render[i]+"\n");
 
-    Game.dialogMessage (str, "Render");
+    Game.message(str);
   }catch(e){
-    Game.dialogMessage (e, "エラー");
+    Game.message(e);
   }
 });
 
