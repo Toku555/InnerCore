@@ -7,7 +7,13 @@ BUILD INFO:
 
 Callback.addCallback("LevelLoaded", function(){
   try{
-    RenderAPI();
+    var rApi = RenderAPI();
+    var str = "";
+
+    for(var i in rApi)
+      str += (i+"\n");
+
+    Game.dialogMessage (str, "RenderAPI");
   }catch(e){
     Game.dialogMessage (e, "エラー");
   }
